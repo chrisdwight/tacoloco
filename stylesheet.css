@@ -79,7 +79,7 @@ body {
 }
 
 .hero {
-    background-image: url('Images/tacos.jpg'); /* Replace with an actual taco image */
+    background-image: url('images/tacos.jpg'); /* Replace with an actual taco image */
     background-size: cover;
     background-position: center;
     color: white;
