@@ -1,0 +1,674 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url("Images/mexico.jpg");
+    background-size: cover;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row; 
+    align-items: center;
+    border-radius: 0 0 8px 8px;
+    padding: 10px 0;
+    margin: 10px;
+}
+
+.header img {
+    height:auto;
+    width:200px;
+    padding: 15px;
+    border-radius: 30%;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 6px 0;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 12px;
+    align-items: center;
+}
+
+.navbar li {
+    margin: 0; /* use gap on the ul instead */
+}
+
+.navbar a {
+    font-family: 'Lobster', cursive;
+    color: #000000;
+    text-decoration: none;
+    font-weight: bolder;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar a:hover {
+    text-decoration: none;
+    background-color: #FF5722;
+    color: #fff; 
+}
+
+.content {
+    background-color: #fff;
+    padding: 20px;
+    overflow-y: auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 20px;
+}
+
+.hero {
+    background-image: url('Images/tacos.jpg'); /* Replace with an actual taco image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+.hero h2 {
+    font-family: 'Lobster', cursive;
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.cta-button {
+    background-color: #FF5722;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #E64A19;
+}
+
+.special-offers {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f0f0f0; /* Light gray background */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.special-offers h2 {
+    font-family: 'Lobster', cursive;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #FF5722; /* Theme color */
+    text-align: center; /* Center the heading */
+}
+
+.offer-item {
+    background-color: white; /* White background for offers */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+    transition: box-shadow 0.3s;
+}
+
+.offer-item:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Elevate on hover */
+}
+
+.offer-item h3 {
+    margin: 0 0 10px;
+    color: #FF5722; /* Theme color */
+}
+
+.offer-item p {
+    margin: 0;
+    color: #333; /* Darker text for readability */
+}
+
+.contact {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.contact h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.about {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #f0f0f0; /* Light background for contrast */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about h2 {
+    font-family: 'Lobster', cursive;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #FF5722; /* Matching theme color */
+}
+
+.about p {
+    line-height: 1.6; /* Improved readability */
+    margin-bottom: 15px;
+}
+
+.video-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.video-section h2 {
+    font-family: 'Lobster', cursive;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #FF5722; /* Matching theme color */
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.menu {
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+.menu h2 {
+    font-family: 'Lobster', cursive;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #FF5722; /* Matching theme color */
+}
+
+.menu-category {
+    margin-bottom: 30px;
+}
+
+.menu-category h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.menu-item {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.menu-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.menu-item h4 {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+    color: #FF5722; /* Matching theme color */
+}
+
+.menu-item p {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.menu-item button {
+    background-color: #FF5722;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.98em;
+    transition: background-color 0.25s, transform 0.12s;
+}
+
+/* Specific styles for Add To Cart buttons in the menu */
+.menu-item .add-to-cart {
+    display: block; /* makes button take full width for easier tapping */
+    width: 100%;
+    padding: 10px 14px; /* larger tap target */
+    margin-top: 12px; /* spacing from description */
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+.menu-item .add-to-cart:hover {
+    background-color: #E64A19;
+    transform: translateY(-1px);
+}
+
+/* Small helper for a compact inline cart button (if used) */
+.cart-link,
+.cart-button {
+    background-color: #FF5722;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+@media (max-width: 768px) {
+    .menu-item .add-to-cart {
+        padding: 10px; /* keep tap target consistent on mobile */
+        font-size: 0.95em;
+    }
+}
+
+/* Cart modal styles */
+.cart-count {
+    display: inline-block;
+    min-width: 20px;
+    padding: 2px 6px;
+    background: #fff;
+    color: #FF5722;
+    border-radius: 12px;
+    font-weight: 700;
+    margin-left: 8px;
+    font-size: 0.9em;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.cart-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9998;
+}
+
+.cart-modal {
+    background: #fff;
+    width: 90%;
+    max-width: 680px;
+    max-height: 80vh;
+    overflow: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    padding: 18px;
+    position: relative;
+}
+
+.cart-modal header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.cart-close {
+    background: transparent;
+    border: none;
+    font-size: 1.6rem;
+    line-height: 1;
+    cursor: pointer;
+    color: #333;
+}
+
+.cart-modal table td button {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background: #fff;
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    .cart-modal { padding: 12px; }
+    .cart-modal header h3 { font-size: 1.1rem; }
+}
+
+/* Cart summary styles */
+.cart-summary {
+    background: #fafafa;
+    border-radius: 6px;
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid #eee;
+}
+.cart-summary strong { color: #333; }
+.price { font-weight: 700; color: #333; margin-top: 8px; }
+
+/* Convert table rows into stacked cards inside the modal on small screens */
+@media (max-width: 700px) {
+    .cart-modal table, .cart-modal thead, .cart-modal tbody, .cart-modal th, .cart-modal td, .cart-modal tr {
+        display: block;
+        width: 100%;
+    }
+    .cart-modal thead { display: none; }
+    .cart-modal tbody tr {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        margin-bottom: 12px;
+        padding: 12px;
+    }
+    .cart-modal td {
+        padding: 6px 0;
+        border: none;
+    }
+    .cart-modal td:nth-child(1)::before { content: 'Item: '; font-weight:600; }
+    .cart-modal td:nth-child(2)::before { content: 'Price: '; font-weight:600; }
+    .cart-modal td:nth-child(3)::before { content: 'Qty: '; font-weight:600; }
+    .cart-modal td:nth-child(4) { text-align: right; }
+}
+
+/* Order tracker styles */
+.order-tracker {
+    margin-top: 10px;
+}
+.order-tracker .eta {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #333;
+}
+.tracker-steps {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+.tracker-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: #fafafa;
+    border: 1px solid #eee;
+    min-width: 110px;
+}
+.tracker-step.completed { background: #e8f5e9; border-color: #c8e6c9; }
+.tracker-step.active { background: #fff3e0; border-color: #ffd54f; }
+.tracker-step .label { font-weight:600; font-size:0.95rem; }
+.tracker-step .time { font-size:0.85rem; color:#666; margin-top:6px; }
+
+@media (max-width:600px){
+    .tracker-steps { flex-direction: column; }
+    .tracker-step { width: 100%; }
+}
+
+/* Cart form (name/phone) styles */
+.cart-form {
+    margin-top: 14px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+.cart-form label { display: block; margin-bottom: 8px; font-size: 0.9rem; color:#333; }
+.cart-form input {
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+@media (max-width:600px){
+    .cart-form { grid-template-columns: 1fr; }
+}
+
+.contact h2 {
+    font-family: 'Lobster', cursive;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #FF5722; /* Matching theme color */
+}
+
+.contact label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: 500;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.contact button {
+    background-color: #FF5722;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.contact button:hover {
+    background-color: #E64A19; /* Darker orange on hover */
+}
+
+.social-media {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.social-media h3 {
+    font-family: 'Lobster', cursive;
+    font-size: 1.5em;
+    color: #FF5722; /* Matching theme color */
+    margin-bottom: 15px;
+}
+
+.social-media ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between; /* Evenly space links */
+}
+
+.social-media ul li {
+    margin: 0 10px;
+}
+
+.social-media ul li a {
+    text-decoration: none;
+    color: #FF5722; /* Theme color */
+    font-weight: 500;
+    padding: 10px 15px;
+    border: 2px solid #FF5722; /* Border matching theme color */
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.social-media ul li a:hover {
+    background-color: #FF5722; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .container {
+        padding: 10px; /* Reduce padding on larger tablets */
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar {
+        background-color: white;
+        border-radius: 30%;
+        padding: 10px;
+    }
+    
+    .navbar ul {
+        flex-direction: column; /* Stack navbar items vertically */
+        align-items: center;
+        margin: 10px 0;
+    }
+
+    .navbar ul li {
+        margin: 10px 0; /* Space between navbar items */
+    }
+
+    .hero h2 {
+        font-size: 1.8em; /* Slightly smaller heading */
+    }
+
+    .hero p {
+        font-size: 1.2em; /* Smaller paragraph text */
+    }
+
+    .special-offers h2 {
+        font-size: 1.8em; /* Adjust heading size */
+    }
+
+    .offer-item {
+        padding: 10px; /* Reduce padding on offer items */
+    }
+
+    .offer-item h3 {
+        font-size: 1.4em; /* Adjust offer item heading size */
+    }
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 1.8em; /* Smaller site title */
+    }
+
+    .navbar {
+        background-color: white;
+        border-radius: 30%;
+    }
+
+    .navbar ul {
+        margin: 10px 0;
+    }
+
+    .contact label,
+    .contact input,
+    .contact textarea {
+        font-size: 0.9em; /* Smaller form text */
+    }
+
+    .contact button {
+        padding: 8px 12px; /* Adjust button size */
+        font-size: 0.9em; /* Smaller button text */
+    }
+
+    .social-media ul {
+        flex-direction: column; /* Stack social links vertically */
+    }
+
+    .social-media ul li {
+        margin: 5px 0; /* Adjust spacing */
+    }
+
+    .footer {
+        font-size: 0.9em; /* Smaller footer text */
+    }
+}
+
+@media (max-width: 576px) {
+    .hero h2 {
+        font-size: 1.5em; /* Further reduce heading size */
+    }
+
+    .hero p {
+        font-size: 1em; /* Adjust paragraph text */
+    }
+
+    .special-offers h2 {
+        font-size: 1.5em; /* Smaller heading */
+    }
+
+    .offer-item {
+        margin: 5px 0; /* Reduce margin */
+    }
+
+    .offer-item h3 {
+        font-size: 1.2em; /* Smaller offer item heading */
+    }
+}
+
