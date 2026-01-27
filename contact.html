@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="contact" href="contact.html">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="images/tacoloco.jpeg" alt="tacolocologo">
+            <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+            <label for="nav-toggle" class="nav-toggle" aria-label="Open navigation">
+                <span class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="menu.html">MENU</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="content">
+            <section class="contact">
+                <h2>Contact Us</h2>
+                <p>We'd love to hear from you! Reach out to us through any of the following methods:</p>
+                <address>
+                    <p><strong>Address:</strong> 123 Taco Lane, Flavor Town, TX 12345</p>
+                    <p><strong>Phone:</strong> <a href="tel:+1234567890">(123) 456-7890</a></p>
+                </address>
+
+                <form action="#" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
+
+
+                <div class="social-media">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+                        <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+                        <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
+                        <li><a href="https://www.tiktok.com" target="_blank">TikTok</a></li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">© 2024 Taco Loco. All rights reserved.</footer>
+    </div>
+    <script src="nav.js"></script>
+</body>
+</html>
